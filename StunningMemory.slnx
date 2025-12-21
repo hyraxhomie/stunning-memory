@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StunningMemory.API/StunningMemory.API.csproj" />
+    <Project Path="src/StunningMemory.Domain/StunningMemory.Domain.csproj" />
+    <Project Path="src/StunningMemory.Infrastructure/StunningMemory.Infrastructure.csproj" />
+  </Folder>
+</Solution>
