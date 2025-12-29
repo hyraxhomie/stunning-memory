@@ -2,9 +2,9 @@ namespace StunningMemory.Domain.Entities;
 
 public class DataType
 {
-    Guid id { get; set; }
-    string Name { get; set; }
-    string BaseStorageType { get; set; }
-    bool RequiresReference { get; set; }
-    ICollection<PropertyDefinition> PropertyDefinitions { get; set; }
+    public Guid Guid { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string BaseStorageType { get; set; } = string.Empty;
+    public bool RequiresReference { get; set; } = false;
+    public ICollection<PropertyDefinition> PropertyDefinitions { get; set; } = [];
 }
