@@ -8,6 +8,5 @@ public class DataType
     public required string DotNetType { get; set; } = string.Empty;
     public bool RequiresReference { get; set; } = false;
     public string ValidationRules { get; set; } = string.Empty;
-
     public ICollection<PropertyDefinition> PropertyDefinitions { get; set; } = [];
 }

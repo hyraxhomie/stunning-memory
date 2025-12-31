@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StunningMemory.Domain.Entities;
 
-namespace StunningMemory.Infrastructure.Data.Configuration;
+namespace StunningMemory.Infrastructure.Data.Configurations;
 
 public class DataTypeConfigurations : IEntityTypeConfiguration<DataType>
 {
@@ -25,6 +25,8 @@ public class DataTypeConfigurations : IEntityTypeConfiguration<DataType>
         builder.Property( dt => dt.DotNetType )
         .IsRequired()
         .HasMaxLength(100);
+
+        builder.Property( dt => dt.RequiresReference);
 
         builder.Property(dt => dt.ValidationRules)
         .HasColumnType("jsonb");
