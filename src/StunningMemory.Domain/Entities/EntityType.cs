@@ -2,5 +2,5 @@
 
 public class EntityType : Entity
 {
-    public ICollection<PropertyDefinition> PropertyDefinitions { get; set; } = [];
+    public ICollection<PropertyDefinition> Properties { get; set; } = [];
 }
