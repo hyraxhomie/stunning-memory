@@ -1,0 +1,13 @@
+{
+	"omnisharp.enableEditorConfigSupport": true,
+	"editor.formatOnSave": true,
+	"[csharp]": {
+		"editor.defaultFormatter": "ms-dotnettools.csharp",
+		"editor.tabSize": 4
+	},
+	"dotnet.defaultSolution": "StunningMemory.slnx",
+	"csharp.format.enable": true,
+	"editor.defaultFormatter": "ms-dotnettools.csharp",
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true
+}

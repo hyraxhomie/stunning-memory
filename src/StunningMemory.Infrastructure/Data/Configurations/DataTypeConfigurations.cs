@@ -5,30 +5,30 @@ namespace StunningMemory.Infrastructure.Data.Configurations;
 
 public class DataTypeConfigurations : IEntityTypeConfiguration<DataType>
 {
-    public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<DataType> builder)
+    public void Configure( Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<DataType> builder )
     {
-        builder.ToTable("DataTypes");
+        builder.ToTable( "DataTypes" );
 
         builder.HasKey( dt => dt.Guid );
 
         builder.Property( dt => dt.Name )
-        .IsRequired()
-        .HasMaxLength(50);
+          .IsRequired()
+          .HasMaxLength( 50 );
 
         builder.HasIndex( dt => dt.Name )
-        .IsUnique();
+          .IsUnique();
 
         builder.Property( dt => dt.SqlType )
-        .IsRequired()
-        .HasMaxLength(50);
+          .IsRequired()
+          .HasMaxLength( 50 );
 
         builder.Property( dt => dt.DotNetType )
-        .IsRequired()
-        .HasMaxLength(100);
+          .IsRequired()
+          .HasMaxLength( 100 );
 
-        builder.Property( dt => dt.RequiresReference);
+        builder.Property( dt => dt.RequiresReference );
 
-        builder.Property(dt => dt.ValidationRules)
-        .HasColumnType("jsonb");
+        builder.Property( dt => dt.ValidationRules )
+          .HasColumnType( "jsonb" );
     }
 }

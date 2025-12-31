@@ -2,7 +2,6 @@
 **/obj/
 .claude/
 .idea/
-.vscode/
 .ide/
 appsettings.json
 **/appsettings.json
