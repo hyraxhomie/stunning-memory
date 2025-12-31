@@ -8,7 +8,7 @@ public class EntityConfiguration<T> : IEntityTypeConfiguration<T> where T : Enti
 {
     public virtual void Configure( EntityTypeBuilder<T> builder )
     {
-        builder.Property( e => e.Guid );
+        builder.HasKey( e => e.Guid );
 
         builder.Property( e => e.Name )
           .IsRequired()
@@ -22,12 +22,10 @@ public class EntityConfiguration<T> : IEntityTypeConfiguration<T> where T : Enti
           .HasMaxLength( 500 );
 
         builder.Property( e => e.CreatedAt )
-          .IsRequired()
-          .HasColumnType( "TIMESTAMPTZ" );
+          .IsRequired();
 
 
         builder.Property( e => e.LastModified )
-          .IsRequired()
-          .HasColumnType( "TIMESTAMPTZ" );
+          .IsRequired();
     }
 }
